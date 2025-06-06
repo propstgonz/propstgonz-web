@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>En Construcción</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: #ffe066;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #333;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .construction-img {
+            width: 160px;
+            height: 160px;
+            margin-bottom: 32px;
+            background: #fffbe6;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        .construction-img svg {
+            width: 100px;
+            height: 100px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            color: #555;
+        }
+        footer {
+            background: #fffbe6;
+            padding: 24px 0 16px 0;
+            font-size: 1rem;
+            color: #666;
+            border-top: 1px solid #ffe066;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            text-align: left;
+        }
+        .info-list li {
+            margin-bottom: 4px;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; }
+            .construction-img { width: 100px; height: 100px; }
+            .construction-img svg { width: 60px; height: 60px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="construction-img">
+            <!-- SVG Icon: Construction -->
+            <svg viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="30" fill="#ffe066" stroke="#e1b800" stroke-width="4"/>
+                <rect x="18" y="36" width="28" height="10" rx="3" fill="#fffbe6" stroke="#e1b800" stroke-width="2"/>
+                <rect x="26" y="18" width="12" height="20" rx="6" fill="#fffbe6" stroke="#e1b800" stroke-width="2"/>
+                <rect x="29" y="10" width="6" height="10" rx="3" fill="#e1b800"/>
+                <circle cx="32" cy="46" r="3" fill="#e1b800"/>
+            </svg>
+        </div>
+        <h1>¡Sitio en construcción!</h1>
+        <p>Estoy trabajando en esta mierda cuando me apetece lol.<br>Vuelve pronto.</p>
+    </div>
+    <footer>
+        <ul class="info-list">
+            <li><strong>Dirección del servidor:</strong> <span id="server-host">propstgonz.baronette.es</span></li>
+            <li><strong>IP del servidor:</strong> <span id="server-ip">92.191.90.225</span></li>
+            <li><strong>Tu IP:</strong> <span id="client-ip">Detectando...</span></li>
+        </ul>
+    </footer>
+    <script>
+        fetch('https://api.ipify.org?format=json')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('client-ip').textContent = data.ip;
+            })
+            .catch(() => {
+                document.getElementById('client-ip').textContent = 'No disponible';
+            });
+    </script>
+</body>
+</html>
