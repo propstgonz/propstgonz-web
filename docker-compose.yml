@@ -1,0 +1,19 @@
+services:
+  webtest:
+    container_name: propstgonz_web
+    restart: always
+    image: httpd
+    volumes:
+      - ./html/:/usr/local/apache2/htdocs/
+    networks:
+      - traefik-net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.propstgonz.rule=Host(`propstgonz.baronette.es`)"
+      - "traefik.http.routers.propstgonz.entrypoints=websecure"
+      - "traefik.http.routers.propstgonz.tls=true"
+      - "traefik.http.services.propstgonz.loadbalancer.server.port=80"
+
+networks:
+  traefik-net:
+    external: true
