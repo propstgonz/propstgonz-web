@@ -5,6 +5,9 @@ services:
     image: httpd
     volumes:
       - ./html/:/usr/local/apache2/htdocs/
+      - ./html/apache-custom.conf:/usr/local/apache2/conf/extra/apache-custom.conf
+    command: >
+      sh -c "httpd -D FOREGROUND -f /usr/local/apache2/conf/httpd.conf -C 'Include conf/extra/apache-custom.conf'"
     networks:
       - traefik-net
     labels:
