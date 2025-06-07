@@ -5,7 +5,7 @@ services:
     image: httpd
     volumes:
       - ./html/:/usr/local/apache2/htdocs/
-      - ./apache-custom.conf:/usr/local/apache2/conf/extra/apache-custom.conf
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
     networks:
       - traefik-net
     labels:
