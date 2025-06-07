@@ -1,3 +1,3 @@
-/* */
-window.location.href = "inacabado.html";
-
+/* 
+window.location.href = "unfinished.html";
+*/
