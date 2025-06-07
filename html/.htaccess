@@ -1,7 +1,10 @@
 RewriteEngine On
 
+# Permite acceder a /page/ y lo sirve como page.html
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^([^/]+)/$ $1.html [L]
+
+# Redirige /page.html a /page/
 RewriteCond %{THE_REQUEST} \s/([^\s]+)\.html[\s?]
 RewriteRule ^([^.]+)\.html$ /$1/ [R=301,L]
