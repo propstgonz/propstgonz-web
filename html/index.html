@@ -1,57 +1,88 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="transition-colors duration-500">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alejandro Propst | Portfolio</title>
+    <title>About propstgonz</title>
     <link rel="icon" href="img/propstgonz-favicon.png" type="image/x-icon" />
-    <script src="scripts/process.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="description" content="Portfolio de Alejandro Propst, estudiante de informática interesado en desarrollo web, scripting y tecnología.">
+    <script defer src="scripts/toggle.js"></script>
   </head>
 
-  <body class="bg-gray-100 text-gray-800 font-sans min-h-screen flex flex-col">
+  <body id="body" class="font-sans min-h-screen flex flex-col transition-colors duration-500 bg-[#F4F4F4] text-[#2D2D2D]">
 
     <!-- Header -->
-    <header class="bg-white shadow-md py-10 border-b border-gray-300">
-      <div class="max-w-3xl mx-auto px-6 text-center">
-        <img src="img/propstfake.gif" alt="Foto de perfil"
-             class="w-28 h-28 rounded-full border-4 border-gray-800 object-cover mx-auto mb-4" />
-        <h1 class="text-3xl font-bold">Alejandro Propst</h1>
-        <p class="text-gray-600 text-sm">"propstgonz" | Estudiante de informática</p>
+    <header id="header" class="relative bg-white shadow-md py-10 border-b border-[#D99058] transition-colors duration-500">
+      <!-- Botón estático arriba a la derecha -->
+      <button id="themeToggle"
+        class="absolute top-4 right-4 flex items-center gap-2 bg-[#D99058] text-white px-4 py-2 rounded-full shadow hover:bg-[#b77344] transition">
+        <span id="themeIcon" class="transition-all duration-300 text-lg">🌞</span>
+        <span id="themeText" class="transition-opacity duration-500">Modo claro</span>
+      </button>
+
+      <!-- Contenido centrado -->
+      <div class="max-w-3xl mx-auto px-6 text-center mt-6">
+        <img src="img/propstfake.gif" alt="pfp"
+             class="w-28 h-28 rounded-full border-4 border-[#D99058] object-cover mx-auto mb-4" />
+        <h1 id="name-text" class="text-3xl font-bold">Alejandro Propst</h1>
+        <p id="subtitle-text" class="text-sm text-[#777]">"Propstg" | IT Student</p>
       </div>
     </header>
 
     <!-- Main Content -->
     <main class="flex-1 max-w-3xl mx-auto px-6 py-12 space-y-12">
 
-      <!-- Sobre mí -->
+      <!-- About me -->
       <section>
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4 border-l-4 border-blue-500 pl-3">Sobre mí</h2>
-        <p class="text-gray-700 leading-relaxed">
-          Soy estudiante de informática con interés en el desarrollo web, scripting, automatización y todo lo que implique resolver problemas con código. Me gusta aprender tecnologías nuevas, trabajar en proyectos personales y escribir código limpio y funcional.
+        <h2 class="text-2xl font-semibold mb-4 border-l-4 border-blue-400 pl-3">About me</h2>
+        <p id="about-text" class="leading-relaxed">
+          I am an IT student, currently in my second year. I am passionate about operative systems and scripting, always eager to learn new technologies and improve my skills. 
+          I enjoy working on personal projects and being a weirdo in my free time.
         </p>
       </section>
 
-      <!-- Tecnologías -->
+      <!-- Tech -->
       <section>
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4 border-l-4 border-green-500 pl-3">Tecnologías que manejo</h2>
-        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm text-gray-700">
-          <li class="bg-white shadow-sm rounded-md p-3 border border-gray-200">HTML5 / CSS3</li>
-          <li class="bg-white shadow-sm rounded-md p-3 border border-gray-200">JavaScript</li>
-          <li class="bg-white shadow-sm rounded-md p-3 border border-gray-200">Tailwind CSS</li>
-          <li class="bg-white shadow-sm rounded-md p-3 border border-gray-200">Python (scripts)</li>
-          <li class="bg-white shadow-sm rounded-md p-3 border border-gray-200">Git / GitHub</li>
-          <li class="bg-white shadow-sm rounded-md p-3 border border-gray-200">Linux (CLI)</li>
+        <h2 class="text-2xl font-semibold mb-4 border-l-4 border-green-400 pl-3">Technical proficiencies</h2>
+        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
+          <li data-block class="bg-[#EAEAEA] shadow-sm rounded-md p-3 border border-[#D0D0D0] flex items-center gap-3">
+            <img src="img/logo/html-logo.png" alt="HTML5/CSS3" class="w-6 h-6" />
+            FrontEnd | HTML5 / CSS3
+          </li>
+          <li data-block class="bg-[#EAEAEA] shadow-sm rounded-md p-3 border border-[#D0D0D0] flex items-center gap-3">
+            <img src="img/logo/javascript-logo.png" alt="JavaScript" class="w-6 h-6" />
+            JavaScript
+          </li>
+          <li data-block class="bg-[#EAEAEA] shadow-sm rounded-md p-3 border border-[#D0D0D0] flex items-center gap-3">
+            <img src="img/logo/postfix.png" alt="Mail Server" class="w-6 h-6" />
+            Mail server systems
+          </li>
+          <li data-block class="bg-[#EAEAEA] shadow-sm rounded-md p-3 border border-[#D0D0D0] flex items-center gap-3">
+            <img src="img/logo/apache-logo.png" alt="Web Hosting" class="w-6 h-6" />
+            Web hosting
+          </li>
+          <li data-block class="bg-[#EAEAEA] shadow-sm rounded-md p-3 border border-[#D0D0D0] flex items-center gap-3">
+            <img src="img/logo/docker-logo.png" alt="Docker" class="w-6 h-6" />
+            Docker
+          </li>
+          <li data-block class="bg-[#EAEAEA] shadow-sm rounded-md p-3 border border-[#D0D0D0] flex items-center gap-3">
+            <img src="img/logo/Tux-logo.png" alt="Linux" class="w-6 h-6" />
+            Linux experienced
+          </li>
         </ul>
       </section>
 
-      <!-- Contacto / Redes -->
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="text-center text-sm py-6 bg-white border-t border-[#D99058] transition-colors duration-500">
       <section>
-        <h2 class="text-2xl font-semibold text-gray-900 mb-4 border-l-4 border-purple-500 pl-3">Redes & Contacto</h2>
-        <div class="flex space-x-6 items-center">
+        <h2 class="text-2xl font-semibold mb-4 pl-3">Networks & Contact Information</h2>
+        <div class="flex justify-center space-x-6 items-center">
           <a href="https://github.com/propstgonz" target="_blank" aria-label="GitHub" class="hover:scale-110 transition-transform">
-            <img src="img/github-icon.png" alt="GitHub" class="w-8 h-8 grayscale hover:grayscale-0" />
+            <img id="github-light" src="img/github-claro.png" alt="GitHub Light" class="w-8 h-8 grayscale hover:grayscale-0 hidden" />
+            <img id="github-dark" src="img/github-dark.png" alt="GitHub Dark" class="w-8 h-8 grayscale hover:grayscale-0" />
           </a>
           <a href="https://discord.com/users/1000141861333258393" target="_blank" aria-label="Discord" class="hover:scale-110 transition-transform">
             <img src="img/discord.png" alt="Discord" class="w-8 h-8 grayscale hover:grayscale-0" />
@@ -59,14 +90,13 @@
           <a href="https://x.com/JoeBiden" target="_blank" aria-label="X/Twitter" class="hover:scale-110 transition-transform">
             <img src="img/twitter_x.png" alt="Twitter" class="w-8 h-8 grayscale hover:grayscale-0" />
           </a>
+          <a href="mailto:propstg@baronette.es" aria-label="Email" class="hover:scale-110 transition-transform">
+            <img src="img/mail-icon.png" alt="Email" class="w-8 h-8 grayscale hover:grayscale-0" />
+          </a>
         </div>
       </section>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="text-center text-gray-500 text-sm py-6 bg-white border-t border-gray-300">
-      <p>© 2025 Alejandro Propst — Hecho con paciencia, ganas y algo de café</p>
+      <p id="footer-text" class="text-[#777] mt-6">© 2025 Propstg (real)</p>
     </footer>
 
   </body>
