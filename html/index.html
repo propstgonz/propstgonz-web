@@ -1,44 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>propstgonz</title>
-  <link rel="icon" href="img/propstgonz-favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="css/styles.css" />
-  <script src="scripts/process.js"></script>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <img src="img/propstfake.gif" alt="Foto de perfil" class="avatar" />
-      <h1>Alejandro Propst
-        <br>aka "Propstg" or "propstgonz"<br/>
-      </h1>
-      <p></p>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alejandro Propst | Portfolio</title>
+    <link rel="icon" href="img/propstgonz-favicon.png" type="image/x-icon" />
+    <script src="scripts/process.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Portfolio de Alejandro Propst, estudiante de informática interesado en desarrollo web, scripting y tecnología.">
+  </head>
 
-  <main class="container">
-    <section class="about">
-      <h2>About me</h2>
-      <p>
-        Making a web with a teeth in pain and bored as fuck is like eating a cricket while you're shitting.
-      </p>
-    </section>
-  </main>
+  <body class="bg-gray-100 text-gray-800 font-sans min-h-screen flex flex-col">
 
-  <footer>
-    <div class="social-icons">
-      <a href="https://github.com/propstgonz" target="_blank">
-        <img src="img/github-icon.png" alt="GitHub">
-      </a>
-      <a href="https://discord.com/users/1000141861333258393" target="_blank">
-        <img src="img/discord.png" alt="Discord">
-      </a>
-      <a href="https://x.com/JoeBiden" target="_blank">
-        <img src="img/twitter_x.png" alt="Twitter">
-      </a>
-    </div>
-    <p>© 2025 Propstg (I know no one cares)</p>
-  </footer>
+    <!-- Header -->
+    <header class="bg-white shadow-md py-10 border-b border-gray-300">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <img src="img/propstfake.gif" alt="Foto de perfil"
+             class="w-28 h-28 rounded-full border-4 border-gray-800 object-cover mx-auto mb-4" />
+        <h1 class="text-3xl font-bold">Alejandro Propst</h1>
+        <p class="text-gray-600 text-sm">"propstgonz" | Estudiante de informática</p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 max-w-3xl mx-auto px-6 py-12 space-y-12">
+
+      <!-- Sobre mí -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4 border-l-4 border-blue-500 pl-3">Sobre mí</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Soy estudiante de informática con interés en el desarrollo web, scripting, automatización y todo lo que implique resolver problemas con código. Me gusta aprender tecnologías nuevas, trabajar en proyectos personales y escribir código limpio y funcional.
+        </p>
+      </section>
+
+      <!-- Tecnologías -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4 border-l-4 border-green-500 pl-3">Tecnologías que manejo</h2>
+        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm text-gray-700">
+          <li class="bg-white shadow-sm rounded-md p-3 border border-gray-200">HTML5 / CSS3</li>
+          <li class="bg-white shadow-sm rounded-md p-3 border border-gray-200">JavaScript</li>
+          <li class="bg-white shadow-sm rounded-md p-3 border border-gray-200">Tailwind CSS</li>
+          <li class="bg-white shadow-sm rounded-md p-3 border border-gray-200">Python (scripts)</li>
+          <li class="bg-white shadow-sm rounded-md p-3 border border-gray-200">Git / GitHub</li>
+          <li class="bg-white shadow-sm rounded-md p-3 border border-gray-200">Linux (CLI)</li>
+        </ul>
+      </section>
+
+      <!-- Contacto / Redes -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4 border-l-4 border-purple-500 pl-3">Redes & Contacto</h2>
+        <div class="flex space-x-6 items-center">
+          <a href="https://github.com/propstgonz" target="_blank" aria-label="GitHub" class="hover:scale-110 transition-transform">
+            <img src="img/github-icon.png" alt="GitHub" class="w-8 h-8 grayscale hover:grayscale-0" />
+          </a>
+          <a href="https://discord.com/users/1000141861333258393" target="_blank" aria-label="Discord" class="hover:scale-110 transition-transform">
+            <img src="img/discord.png" alt="Discord" class="w-8 h-8 grayscale hover:grayscale-0" />
+          </a>
+          <a href="https://x.com/JoeBiden" target="_blank" aria-label="X/Twitter" class="hover:scale-110 transition-transform">
+            <img src="img/twitter_x.png" alt="Twitter" class="w-8 h-8 grayscale hover:grayscale-0" />
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 text-sm py-6 bg-white border-t border-gray-300">
+      <p>© 2025 Alejandro Propst — Hecho con paciencia, ganas y algo de café</p>
+    </footer>
+
+  </body>
+</html>
