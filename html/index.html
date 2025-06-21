@@ -1,103 +1,164 @@
 <!DOCTYPE html>
-<html lang="es" class="transition-colors duration-500">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About propstgonz</title>
-    <link rel="icon" href="img/propstgonz-favicon.png" type="image/x-icon" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <meta name="description" content="Portfolio de Alejandro Propst, estudiante de informática interesado en desarrollo web, scripting y tecnología.">
-    <script defer src="scripts/toggle.js"></script>
-  </head>
+<html lang="en" class="bg-[#0f1117] text-gray-200 font-mono">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>~ propstgonz</title>
+  <link rel="icon" href="img/propstgonz-favicon.png" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="propstgonz - personal site of Alejandro Propst. Nerdy, messy, honest." />
+  <style>
+    .tool-button {
+      @apply bg-[#1f2937] p-2 border border-gray-600 rounded flex items-center justify-center text-white hover:bg-[#2d3748] transition cursor-pointer;
+    }
+    #visionModal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+      display: none;
+    }
+    #visionModal img {
+      max-width: 90%;
+      max-height: 90%;
+      animation: zoomIn 0.3s ease-out;
+    }
+    #visionModal .close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #1f2937;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    @keyframes zoomIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
 
-  <body id="body" class="font-sans min-h-screen flex flex-col transition-colors duration-500 bg-[#F4F4F4] text-[#2D2D2D]">
-
-    <!-- Header -->
-    <header id="header" class="relative bg-white shadow-md py-10 border-b border-[#D99058] transition-colors duration-500">
-      <!-- Botón estático arriba a la derecha -->
-      <button id="themeToggle"
-        class="absolute top-4 right-4 flex items-center gap-2 bg-[#D99058] text-white px-4 py-2 rounded-full shadow hover:bg-[#b77344] transition">
-        <span id="themeIcon" class="transition-all duration-300 text-lg">🌞</span>
-        <span id="themeText" class="transition-opacity duration-500">Modo claro</span>
-      </button>
-
-      <!-- Contenido centrado -->
-      <div class="max-w-3xl mx-auto px-6 text-center mt-6">
-        <img src="img/propstfake.gif" alt="pfp"
-             class="w-28 h-28 rounded-full border-4 border-[#D99058] object-cover mx-auto mb-4" />
-        <h1 id="name-text" class="text-3xl font-bold">Alejandro Propst</h1>
-        <p id="subtitle-text" class="text-sm text-[#777]">"Propstg" | IT Student</p>
-      </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="flex-1 max-w-3xl mx-auto px-6 py-12 space-y-12">
-
-      <!-- About me -->
-      <section>
-        <h2 class="text-2xl font-semibold mb-4 border-l-4 border-blue-400 pl-3">About me</h2>
-        <p id="about-text" class="leading-relaxed">
-          I am an IT student, currently in my second year. I am passionate about operative systems and scripting, always eager to learn new technologies and improve my skills. 
-          I enjoy working on personal projects and being a weirdo in my free time.
-        </p>
-      </section>
-
-      <!-- Tech -->
-      <section>
-        <h2 class="text-2xl font-semibold mb-4 border-l-4 border-green-400 pl-3">Technical proficiencies</h2>
-        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
-          <li data-block class="bg-[#EAEAEA] shadow-sm rounded-md p-3 border border-[#D0D0D0] flex items-center gap-3">
-            <img src="img/logo/html-logo.png" alt="HTML5/CSS3" class="w-6 h-6" />
-            FrontEnd | HTML5 / CSS3
-          </li>
-          <li data-block class="bg-[#EAEAEA] shadow-sm rounded-md p-3 border border-[#D0D0D0] flex items-center gap-3">
-            <img src="img/logo/javascript-logo.png" alt="JavaScript" class="w-6 h-6" />
-            JavaScript
-          </li>
-          <li data-block class="bg-[#EAEAEA] shadow-sm rounded-md p-3 border border-[#D0D0D0] flex items-center gap-3">
-            <img src="img/logo/postfix.png" alt="Mail Server" class="w-6 h-6" />
-            Mail server systems
-          </li>
-          <li data-block class="bg-[#EAEAEA] shadow-sm rounded-md p-3 border border-[#D0D0D0] flex items-center gap-3">
-            <img src="img/logo/apache-logo.png" alt="Web Hosting" class="w-6 h-6" />
-            Web hosting
-          </li>
-          <li data-block class="bg-[#EAEAEA] shadow-sm rounded-md p-3 border border-[#D0D0D0] flex items-center gap-3">
-            <img src="img/logo/docker-logo.png" alt="Docker" class="w-6 h-6" />
-            Docker
-          </li>
-          <li data-block class="bg-[#EAEAEA] shadow-sm rounded-md p-3 border border-[#D0D0D0] flex items-center gap-3">
-            <img src="img/logo/Tux-logo.png" alt="Linux" class="w-6 h-6" />
-            Linux experienced
-          </li>
-        </ul>
-      </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer id="footer" class="text-center text-sm py-6 bg-white border-t border-[#D99058] transition-colors duration-500">
-      <section>
-        <h2 class="text-2xl font-semibold mb-4 pl-3">Networks & Contact Information</h2>
-        <div class="flex justify-center space-x-6 items-center">
-          <a href="https://github.com/propstgonz" target="_blank" aria-label="GitHub" class="hover:scale-110 transition-transform">
-            <img id="github-light" src="img/github-claro.png" alt="GitHub Light" class="w-8 h-8 grayscale hover:grayscale-0 hidden" />
-            <img id="github-dark" src="img/github-dark.png" alt="GitHub Dark" class="w-8 h-8 grayscale hover:grayscale-0" />
-          </a>
-          <a href="https://discord.com/users/1000141861333258393" target="_blank" aria-label="Discord" class="hover:scale-110 transition-transform">
-            <img src="img/discord.png" alt="Discord" class="w-8 h-8 grayscale hover:grayscale-0" />
-          </a>
-          <a href="https://x.com/JoeBiden" target="_blank" aria-label="X/Twitter" class="hover:scale-110 transition-transform">
-            <img src="img/twitter_x.png" alt="Twitter" class="w-8 h-8 grayscale hover:grayscale-0" />
-          </a>
-          <a href="mailto:propstg@baronette.es" aria-label="Email" class="hover:scale-110 transition-transform">
-            <img src="img/mail-icon.png" alt="Email" class="w-8 h-8 grayscale hover:grayscale-0" />
-          </a>
+<body class="min-h-screen flex flex-col px-6 py-8">
+  <!-- Header -->
+  <header class="mb-12">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-[#1f2937] p-6 rounded-lg border border-gray-600 shadow">
+        <div class="flex items-center space-x-4 mb-4">
+          <img src="img/propstfake.gif" alt="pfp" class="w-14 h-14 rounded-full border-2 border-[#D99058]" />
+          <div>
+            <h1 class="text-xl font-bold text-[#D99058]">propstgonz</h1>
+            <p class="text-sm text-gray-400">~/about — probably overthinking something right now</p>
+          </div>
         </div>
-      </section>
+        <p id="typed-intro" class="text-sm text-cyan-300 terminal-cursor whitespace-pre-wrap"></p>
+      </div>
+    </div>
+  </header>
 
-      <p id="footer-text" class="text-[#777] mt-6">© 2025 Propstg (real)</p>
-    </footer>
+  <!-- Main -->
+  <main class="max-w-2xl mx-auto space-y-10">
 
-  </body>
+    <!-- Logs -->
+    <section>
+      <h2 class="text-lg font-semibold text-[#D99058] mb-3">[ logs / life updates ]</h2>
+      <ul class="font-mono text-sm text-green-300 space-y-2">
+        <li>[2025-06-21] rewrote this page again instead of sleeping</li>
+        <li>[2025-06-20] deployed nginx reverse proxy (with too much coffee)</li>
+        <li>[2025-06-18] broke my mail config... again</li>
+      </ul>
+      <div id="rotating-fish-container" class="ascii-art mt-4 text-center"></div>
+    </section>
+
+    <!-- Tools -->
+    <section>
+      <h2 class="text-lg font-semibold text-[#D99058] mb-3">[ tools I kinda know how to use ]</h2>
+      <ul class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
+        <li class="bg-[#1f2937] p-2 border border-gray-600 rounded flex items-center gap-2">
+          <img src="img/logo/html-logo.png" class="w-5 h-5" /> HTML / CSS
+        </li>
+        <li class="bg-[#1f2937] p-2 border border-gray-600 rounded flex items-center gap-2">
+          <img src="img/logo/javascript-logo.png" class="w-5 h-5" /> JavaScript
+        </li>
+        <li class="bg-[#1f2937] p-2 border border-gray-600 rounded flex items-center gap-2">
+          <img src="img/logo/postfix.png" class="w-5 h-5" /> Postfix (email chaos)
+        </li>
+        <li class="bg-[#1f2937] p-2 border border-gray-600 rounded flex items-center gap-2">
+          <img src="img/logo/apache-logo.png" class="w-5 h-5" /> Nginx / Apache
+        </li>
+        <li class="bg-[#1f2937] p-2 border border-gray-600 rounded flex items-center gap-2">
+          <img src="img/logo/docker-logo.png" class="w-5 h-5" /> Docker
+        </li>
+        <li class="bg-[#1f2937] p-2 border border-gray-600 rounded flex items-center gap-2">
+          <img src="img/logo/Tux-logo.png" class="w-5 h-5" /> Linux (mostly Arch... btw)
+        </li>
+      </ul>
+    </section>
+
+    <!-- Philosophy -->
+    <section>
+      <h2 class="text-lg font-semibold text-[#D99058] mb-3">[ a bit more human, I guess ]</h2>
+      <p class="text-sm text-gray-300 leading-relaxed">
+        I'm not just into tech — I journal on paper, obsess over lo-fi beats, and keep way too many terminal tabs open because I forget to close them.<br/>
+        I love the feeling of fixing something at 2:47am and then wondering why it broke at 2:48am.<br/>
+        This site is my little messy corner. It’s not optimized for anything but honesty.
+      </p>
+    </section>
+
+    <!-- My Stuff -->
+    <section>
+      <h2 class="text-lg font-semibold text-[#D99058] mb-3">[ my stuff / where I put things ]</h2>
+      <ul class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
+        <li class="tool-button" onclick="location.href='pc/index.html'">🖥️ My computers</li>
+        <li class="tool-button" onclick="openVisionModal()">🌌 My vision</li>
+        <li class="tool-button" onclick="location.href='faq.html'">❓ FAQ</li>
+        <li class="tool-button" onclick="location.href='hub/index.html'">🔗 My hub</li>
+        <li class="tool-button" onclick="location.href='clicker/index.html'">📈 Clicker</li>
+        <li class="tool-button" onclick="window.open('https://youtu.be/iik25wqIuFo?si=iAz2SpMPNyqpUVr_', '_blank')">😹 Funny kitty videos</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2 class="text-lg font-semibold text-[#D99058] mb-3">[ reach me / socials ]</h2>
+      <div class="flex space-x-4 text-sm">
+        <a href="https://github.com/propstgonz" target="_blank" class="hover:underline text-white">GitHub</a>
+        <a href="https://discord.com/users/1000141861333258393" target="_blank" class="hover:underline text-white">Discord</a>
+        <a href="mailto:propstg@baronette.es" class="hover:underline text-white">Email</a>
+      </div>
+      <p class="text-xs text-gray-500 mt-3">
+        Also valid: <code>curl propstgonz.dev/contact</code>
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-16 text-center text-xs text-gray-500">
+    <p>~ last update: 2025 — version 0.1.3-dev</p>
+    <p>#lofi #terminal #probablyStillAwake</p>
+  </footer>
+
+  <!-- Vision Modal -->
+  <div id="visionModal">
+    <div class="close" onclick="closeVisionModal()">X</div>
+    <img src="img/happy18.png" alt="Vision" />
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/scripts.js"></script>
+  <script>
+    function openVisionModal() {
+      document.getElementById("visionModal").style.display = "flex";
+    }
+    function closeVisionModal() {
+      document.getElementById("visionModal").style.display = "none";
+    }
+  </script>
+</body>
 </html>

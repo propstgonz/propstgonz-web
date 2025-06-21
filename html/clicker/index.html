@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#0f1117] text-white font-mono">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clicker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen gap-6 px-4">
+
+  <h1 class="text-3xl font-bold text-[#D99058]">🖱️ Clicker</h1>
+
+  <p class="text-lg text-cyan-300">Clicks this session:</p>
+  <div id="click-count" class="text-5xl font-bold text-green-400">0</div>
+
+  <button id="click-btn" class="px-8 py-4 text-xl font-bold bg-[#1f2937] border border-gray-600 rounded hover:scale-105 active:scale-95 transition">
+    Click me!
+  </button>
+
+  <a href="../index.html" class="mt-10 text-sm text-gray-400 underline hover:text-white">← Back to main site</a>
+
+  <script src="clicks.js"></script>
+</body>
+</html>
