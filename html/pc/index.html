@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" class="bg-[#0f1117] text-white font-mono">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>~ propstgonz | My Computers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Bienvenido a mi sitio web</h1>
-    <p>Esta es una página de inicio básica.</p>
+<body class="flex flex-col items-center justify-center min-h-screen px-4 text-center gap-6">
+
+  <h1 class="text-3xl font-bold text-[#D99058]">💻 My Machines</h1>
+  <p class="text-sm text-gray-400 max-w-sm">
+    Select which info about which machine you want to see.
+  </p>
+
+  <div class="mt-6 flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+    <a href="computer.html"
+       class="px-6 py-4 bg-[#1f2937] text-cyan-300 border border-gray-600 rounded shadow hover:scale-105 active:scale-95 transition text-lg">
+      🖥️ Desktop PC
+    </a>
+
+    <a href="laptop.html"
+       class="px-6 py-4 bg-[#1f2937] text-cyan-300 border border-gray-600 rounded shadow hover:scale-105 active:scale-95 transition text-lg">
+      💼 Laptop
+    </a>
+
+    <a href="server.html"
+       class="px-6 py-4 bg-[#1f2937] text-cyan-300 border border-gray-600 rounded shadow hover:scale-105 active:scale-95 transition text-lg">
+      🗄️ Server
+    </a>
+  </div>
+
+  <a href="../index.html" class="mt-10 text-sm text-gray-500 underline hover:text-white">← Back to main site</a>
+
 </body>
 </html>
