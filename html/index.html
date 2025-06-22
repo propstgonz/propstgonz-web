@@ -51,7 +51,7 @@
     <div class="max-w-2xl mx-auto">
       <div class="bg-[#1f2937] p-6 rounded-lg border border-gray-600 shadow">
         <div class="flex items-center space-x-4 mb-4">
-          <img src="img/propstfake.gif" alt="pfp" class="w-14 h-14 rounded-full border-2 border-[#D99058]" />
+          <img id="avatar" src="img/propstfake.gif" alt="pfp" class="w-14 h-14 rounded-full border-2 border-[#D99058]" />
           <div>
             <h1 class="text-xl font-bold text-[#D99058]">propstgonz</h1>
             <p class="text-sm text-gray-400">~/about — probably overthinking something right now</p>
@@ -67,7 +67,7 @@
 
     <!-- Logs -->
     <section>
-      <h2 class="text-lg font-semibold text-[#D99058] mb-3">[ logs / life updates ]</h2>
+      <h2 class="text-lg font-semibold text-[#D99058] mb-3">[ logs ]</h2>
       <ul class="font-mono text-sm text-green-300 space-y-2">
         <li>[2025-06-22] rewrote this page again instead of sleeping</li>
         <li>[2025-06-19] bullied random people in Sea of Thieves</li>
@@ -96,7 +96,7 @@
           <img src="img/logo/docker-logo.png" class="w-5 h-5" /> Docker
         </li>
         <li class="bg-[#1f2937] p-2 border border-gray-600 rounded flex items-center gap-2">
-          <img src="img/logo/Tux-logo.png" class="w-5 h-5" /> Linux (I use Arch btw)
+          <img src="img/logo/Tux-logo.png" class="w-5 h-5" /> Linux
         </li>
       </ul>
     </section>
@@ -105,9 +105,9 @@
     <section>
       <h2 class="text-lg font-semibold text-[#D99058] mb-3">[ a bit more human, I guess ]</h2>
       <p class="text-sm text-gray-300 leading-relaxed">
-        I'm not just into tech — I journal on paper, obsess over lo-fi beats, and keep way too many terminal tabs open because I forget to close them.<br/>
-        I love the feeling of fixing something at 2:47am and then wondering why it broke at 2:48am.<br/>
-        This site is my little messy corner. It’s not optimized for anything but honesty.
+        Life is not about seeking comfort or certainty, but about embracing the chaos within and around us. 
+        True strength arises when we confront our deepest fears and contradictions, transforming them into fuel for our growth. In the struggle of becoming, we find our authentic selves—not in conformity, but in the bold creation of our own values. 
+        To live fully is to say ‘yes’ to life’s challenges, to endure its suffering, and to rise beyond it, forging meaning where none existed before.
       </p>
     </section>
 
@@ -133,7 +133,7 @@
         <a href="mailto:propstg@baronette.es" class="hover:underline text-white">Email</a>
       </div>
       <p class="text-xs text-gray-500 mt-3">
-        Also valid: <code>curl propstgonz.dev/contact</code>
+        Also valid: <code>curl propstgonz.dev/contact (fake, I'll not buy another domain)</code>
       </p>
     </section>
   </main>
@@ -141,7 +141,7 @@
   <!-- Footer -->
   <footer class="mt-16 text-center text-xs text-gray-500">
     <p>~ last update: 2025 — version 0.1.3-dev</p>
-    <p>#lofi #terminal #probablyStillAwake</p>
+    <p>I'm becoming insane at this point...</p>
   </footer>
 
   <!-- Vision Modal -->
@@ -152,6 +152,7 @@
 
   <!-- Scripts -->
   <script src="scripts/scripts.js"></script>
+  <script src="scripts/change-avatar.js"></script>
   <script>
     function openVisionModal() {
       document.getElementById("visionModal").style.display = "flex";
