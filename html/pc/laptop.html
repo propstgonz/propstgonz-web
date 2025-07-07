@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-[#0f1117] text-gray-200 font-mono">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>~ propstgonz | Laptop info</title>
-  <link rel="icon" href="/../img/propstgonz-favicon.png" type="image/x-icon" />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="min-h-screen flex items-center justify-center p-6">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>~ propstgonz | Laptop info</title>
+    <link rel="icon" href="/../img/propstgonz-favicon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-3 sm:p-6">
 
-  <div class="bg-[#1f2937] border border-gray-600 p-6 rounded-lg shadow-lg w-full max-w-3xl overflow-auto">
-    <pre class="text-sm text-green-300 leading-relaxed whitespace-pre-wrap">
+    <div class="bg-[#1f2937] border border-gray-600 p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-3xl">
+
+      <!-- Versión completa para pantallas grandes -->
+      <div class="hidden sm:block overflow-x-auto">
+        <pre class="text-sm text-green-300 leading-relaxed whitespace-pre font-mono">
                    -`                    propstg@E5470
                   .o+`                   -------------
                  `ooo/                   OS: Arch Linux x86_64
@@ -29,12 +32,31 @@
    `/ossssso+/:-        -:/+osssso+-     CPU: Intel i5-6300U (4) @ 3.000GHz
   `+sso+:-`                 `.-/+oso:    GPU: Intel Skylake GT2 [HD Graphics 520]
  `++:.                           `-/+/   Memory: 5845MiB / 7604MiB
- .`                                 `/</pre>
+ .`                                 `/
+        </pre>
+      </div>
 
-    <div class="mt-6 text-center">
-      <a href="/pc/" class="text-xs text-gray-400 hover:underline">← Back to my machines</a>
+      <!-- Versión simplificada para móviles -->
+      <div class="block sm:hidden text-green-300 text-sm space-y-1">
+        <p><span class="font-bold">Host:</span> Latitude E5470</p>
+        <p><span class="font-bold">OS:</span> Arch Linux x86_64</p>
+        <p><span class="font-bold">Uptime:</span> 7d 3h</p>
+        <p><span class="font-bold">Shell:</span> zsh 5.9</p>
+        <p><span class="font-bold">DE/WM:</span> GNOME + Mutter</p>
+        <p><span class="font-bold">Resolution:</span> 1366x768</p>
+        <p><span class="font-bold">CPU:</span> i5-6300U @ 3.0GHz</p>
+        <p><span class="font-bold">GPU:</span> Intel HD 520</p>
+        <p><span class="font-bold">RAM:</span> 5.8 / 7.6 GiB</p>
+        <p><span class="font-bold">Packages:</span> 1406 + 53 flatpak</p>
+        <p><span class="font-bold">Terminal:</span> ghostty</p>
+        <p><span class="font-bold">Theme:</span> Fluent-round-orange-Dark</p>
+      </div>
+
+      <div class="mt-6 text-center">
+        <a href="/pc/" class="text-xs text-gray-400 hover:underline">← Back to my machines</a>
+      </div>
+
     </div>
-  </div>
 
-</body>
+  </body>
 </html>

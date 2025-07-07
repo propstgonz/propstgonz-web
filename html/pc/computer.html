@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-[#0f1117] text-gray-200 font-mono">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>~ propstgonz | Main PC info</title>
-  <link rel="icon" href="/../img/propstgonz-favicon.png" type="image/x-icon" />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="min-h-screen flex items-center justify-center p-6">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>~ propstgonz | Main PC info</title>
+    <link rel="icon" href="/../img/propstgonz-favicon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-3 sm:p-6">
 
-  <div class="bg-[#1f2937] border border-gray-600 p-6 rounded-lg shadow-lg w-full max-w-3xl overflow-auto">
-    <pre class="text-sm text-green-300 leading-relaxed whitespace-pre-wrap">
+    <div class="bg-[#1f2937] border border-gray-600 p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-3xl">
+      
+      <!-- Versión completa para pantallas grandes -->
+      <div class="hidden sm:block overflow-x-auto">
+        <pre class="text-sm text-green-300 leading-relaxed whitespace-pre font-mono">
  lllllllllllllll   lllllllllllllll  Propstg@B650
  lllllllllllllll   lllllllllllllll  ------------
  lllllllllllllll   lllllllllllllll  OS: Windows 11 Pro [64 bits]
  lllllllllllllll   lllllllllllllll  Host: ASUS System Product Name
  lllllllllllllll   lllllllllllllll  Kernel: 10.0.26100.0
- lllllllllllllll   lllllllllllllll  Motherboard: ASUSTeK COMPUTER INC. TUF GAMING B650M-PLUS
+ lllllllllllllll   lllllllllllllll  Motherboard: TUF GAMING B650M-PLUS
  lllllllllllllll   lllllllllllllll  Uptime: 2 days 13 hours 12 minutes
                                     Packages: (none)
  lllllllllllllll   lllllllllllllll  Shell: PowerShell v7.5.1
  lllllllllllllll   lllllllllllllll  Resolution: 2560x1440, 1920x1080
  lllllllllllllll   lllllllllllllll  Terminal: svchost
- lllllllllllllll   lllllllllllllll  CPU: AMD Ryzen 5 7600X 6-Core Processor @ 4.7GHz
+ lllllllllllllll   lllllllllllllll  CPU: AMD Ryzen 5 7600X
  lllllllllllllll   lllllllllllllll  GPU: AMD Radeon RX 7700 XT
  lllllllllllllll   lllllllllllllll  Memory: 20.49 GiB / 31.66 GiB (64%)
  lllllllllllllll   lllllllllllllll  Disk (C:): 149 GiB / 930 GiB (16%)
-    </pre>
+        </pre>
+      </div>
 
-    <div class="mt-6 text-center">
-      <a href="/pc/" class="text-xs text-gray-400 hover:underline">← Back to my machines</a>
+      <!-- Versión simplificada para móviles -->
+      <div class="block sm:hidden text-green-300 text-sm space-y-1">
+        <p><span class="font-bold">Host:</span> ASUS System Product Name</p>
+        <p><span class="font-bold">OS:</span> Windows 11 Pro (64-bit)</p>
+        <p><span class="font-bold">Kernel:</span> 10.0.26100.0</p>
+        <p><span class="font-bold">Motherboard:</span> TUF GAMING B650M-PLUS</p>
+        <p><span class="font-bold">Uptime:</span> 2d 13h</p>
+        <p><span class="font-bold">Shell:</span> PowerShell 7.5.1</p>
+        <p><span class="font-bold">CPU:</span> Ryzen 5 7600X</p>
+        <p><span class="font-bold">GPU:</span> RX 7700 XT</p>
+        <p><span class="font-bold">RAM:</span> 20.49 / 31.66 GiB (64%)</p>
+        <p><span class="font-bold">Disk:</span> 149 / 930 GiB (16%)</p>
+      </div>
+
+      <div class="mt-6 text-center">
+        <a href="/pc/" class="text-xs text-gray-400 hover:underline">← Back to my machines</a>
+      </div>
     </div>
-  </div>
 
-</body>
+  </body>
 </html>

@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-[#0f1117] text-gray-200 font-mono">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>~ propstgonz | Server info</title>
-  <link rel="icon" href="/../img/propstgonz-favicon.png" type="image/x-icon" />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="min-h-screen flex items-center justify-center p-6">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>~ propstgonz | Server info</title>
+    <link rel="icon" href="/../img/propstgonz-favicon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-3 sm:p-6">
 
-  <div class="bg-[#1f2937] border border-gray-600 p-6 rounded-lg shadow-lg w-full max-w-3xl overflow-auto">
-    <pre class="text-sm text-green-300 leading-relaxed whitespace-pre-wrap">
+    <div class="bg-[#1f2937] border border-gray-600 p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-3xl">
+
+      <!-- Versión completa para escritorio -->
+      <div class="hidden sm:block overflow-x-auto">
+        <pre class="text-sm text-green-300 leading-relaxed whitespace-pre font-mono">
             .-/+oossssoo+/-.               propstg@propstgserver
         `:+ssssssssssssssssss+:`           ---------------------
       -+ssssssssssssssssssyyssss+-         OS: Ubuntu Server 24.04.2 LTS x86_64
@@ -31,12 +34,28 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso   CPU: Intel Xeon E5-2660 v2 (20) @ 3.0
       -+sssssssssssssssssyyyssss+-
         `:+ssssssssssssssssss+:`
             .-/+oossssoo+/-.
-    </pre>
+        </pre>
+      </div>
 
-    <div class="mt-6 text-center">
-      <a href="/pc/" class="text-xs text-gray-400 hover:underline">← Back to my machines</a>
+      <!-- Versión simplificada para móviles -->
+      <div class="block sm:hidden text-green-300 text-sm space-y-1">
+        <p><span class="font-bold">Host:</span> X79SE PLUS</p>
+        <p><span class="font-bold">OS:</span> Ubuntu Server 24.04.2 LTS</p>
+        <p><span class="font-bold">Uptime:</span> 7d 6h</p>
+        <p><span class="font-bold">Shell:</span> bash 5.2.21</p>
+        <p><span class="font-bold">Resolution:</span> 800x600</p>
+        <p><span class="font-bold">Terminal:</span> /dev/pts/0</p>
+        <p><span class="font-bold">CPU:</span> Xeon E5-2660 v2 (20) @ 3GHz</p>
+        <p><span class="font-bold">GPU:</span> GTX 750</p>
+        <p><span class="font-bold">RAM:</span> 1.7 / 32 GiB</p>
+        <p><span class="font-bold">Packages:</span> 1512 + 4 snap</p>
+      </div>
+
+      <div class="mt-6 text-center">
+        <a href="/pc/" class="text-xs text-gray-400 hover:underline">← Back to my machines</a>
+      </div>
+
     </div>
-  </div>
 
-</body>
+  </body>
 </html>
